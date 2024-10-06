@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - MyShop</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Подключение файла стилей -->
+</head>
+<body>
+    <header>
+        <h1>Ваша корзина</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="order.html">Заказ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart">
+        <h2>Ваши товары</h2>
+        <div id="cart-items">
+            <!-- Здесь будут отображаться товары из корзины -->
+        </div>
+        <div id="cart-total">
+            Итого: 0.00 $
+        </div>
+        <button onclick="window.location.href='order.html'">Оформить заказ</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Интернет-магазин MyShop</p>
+    </footer>
+
+    <script src="js/scripts.js"></script> <!-- Подключение файла с логикой -->
+    <script>
+        displayCart(); // Отображаем корзину при загрузке страницы
+    </script>
+</body>
+</html>

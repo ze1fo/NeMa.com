@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeMa Loading Page</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Подключаем стили -->
+</head>
+<body>
+    <!-- Загрузочная страница -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>NeMa</h1>
+            <p>Welcome to the expanses of Russia's first marketplace with the ability to pay for goods with cryptocurrency. I hope you find your product and come back here with your friends.</p>
+        </div>
+    </div>
+
+    <script>
+        // Скрипт для перехода на главную страницу
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.location.href = "index.html"; // Переход на главную страницу через 3 секунды
+            }, 3000); // Задержка 3 секунды
+        });
+    </script>
+</body>
+</html>
