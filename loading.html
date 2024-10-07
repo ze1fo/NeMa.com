@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeMa Loading Page</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Подключаем стили -->
+</head>
+<body>
+    <!-- Загрузочная страница -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>NeMa</h1>
+            <p>Добро пожаловать на первый российский маркетплейс с возможностью оплаты товаров криптовалютой. Надеюсь, вы найдете нужный товар и вернетесь сюда с друзьями.</p>
+        </div>
+    </div>
+
+    <!-- Основной контент страницы будет подгружен сюда -->
+    <div id="main-content" style="display: none;">
+        <!-- Контент подгружается через JavaScript -->
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // Меняем URL на "index.html" без перезагрузки страницы
+                history.pushState(null, null, "index.html");
+
+                // Подгружаем содержимое главной страницы с помощью AJAX
+                fetch('index.html') // Замените на реальный путь к главной странице
+                    .then(response => response.text())
+                    .then(html => {
+                        // Скрываем загрузочный экран
+                        document.getElementById('loading-screen').style.display = 'none';
+
+                        // Показываем основной контент и подставляем загруженный HTML
+                        document.getElementById('main-content').style.display = 'block';
+                        document.getElementById('main-content').innerHTML = html;
+                    })
+                    .catch(error => console.log('Ошибка при загрузке контента:', error));
+            }, 3000); // Задержка 3 секунды
+        });
+    </script>
+</body>
+</html>

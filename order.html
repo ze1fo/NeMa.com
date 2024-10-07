@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeMa - Оформление заказа</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> <!-- Шрифты -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Оформление заказа</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="order.html">Заказ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-form container">
+        <h2>Информация для доставки</h2>
+        <form id="order-form">
+            <div class="form-group">
+                <label for="full-name">ФИО:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Введите ваше полное имя" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" name="address" placeholder="Введите ваш адрес" required>
+            </div>
+
+            <div class="form-group form-row">
+                <div class="form-col">
+                    <label for="city">Город:</label>
+                    <input type="text" id="city" name="city" placeholder="Город" required>
+                </div>
+                <div class="form-col">
+                    <label for="postal-code">Почтовый индекс:</label>
+                    <input type="text" id="postal-code" name="postal-code" placeholder="Индекс" required>
+                </div>
+            </div>
+
+            <h3>Способ оплаты</h3>
+            <div class="form-group payment-method">
+                <label>
+                    <input type="radio" name="payment" value="credit-card" required> Кредитная карта
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal" required> PayPal
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Оформить заказ</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NeMa. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
